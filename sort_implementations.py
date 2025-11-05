@@ -5,16 +5,22 @@ def bubble_sort(seq):
                 seq[i], seq[i+1] = seq[i+1], seq[i] # swap pair if true
 
 def selection_sort(seq):
-    start_line = 0
     for j in range(len(seq)): 
         low_index = j 
         for i in range(j, len(seq)):                  
             if seq[low_index] > seq[i]:
                 low_index = i
         seq[j], seq[low_index] = seq[low_index], seq[j]
-        # start_line += 1
 
 def insertion_sort(seq):
-    start_line = 0
-    for _ in range(len(seq)):
-        low_index
+    for j in range(len(seq)): # number of passes
+        # print(f" pass: {j}")
+        for i in range(j, 0, -1): # loop through ZoO, starting from the end
+            # print('iteration: ', i)
+            # print(f"ZoO: {[seq[i] for i in range(0, j)]}\tholding={seq[j]}")
+            if seq[i] < seq[i - 1]:
+                # print(True)
+                seq[i], seq[i - 1] = seq[i -1], seq[i]
+                # print(f"after swap ZoO: {[seq[i] for i in range(0, j + 1)]}\tholding={seq[j]}\n")
+    
+            
