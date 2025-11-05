@@ -6,11 +6,15 @@ def bubble_sort(seq):
 
 def selection_sort(seq):
     start_line = 0
-    for _ in range(len(seq)): 
-        low_index = start_line
-        for i in range(start_line, len(seq)):                  
+    for j in range(len(seq)): 
+        low_index = j 
+        for i in range(j, len(seq)):                  
             if seq[low_index] > seq[i]:
                 low_index = i
-        seq[start_line], seq[low_index] = seq[low_index], seq[start_line]
-        start_line += 1
+        seq[j], seq[low_index] = seq[low_index], seq[j]
+        # start_line += 1
 
+def insertion_sort(seq):
+    start_line = 0
+    for _ in range(len(seq)):
+        low_index
